@@ -1,4 +1,4 @@
-/* Center container with structured alignment */
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@
   background-color: #ff8a00;
 }
 
-/* Heading message with better spacing */
+
 .message {
   font-size: 1.5rem;
   font-weight: bold;
@@ -17,7 +17,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Error message styling */
+
 .error {
   font-size: 1rem;
   font-weight: 500;
@@ -25,7 +25,7 @@
   margin-top: 0.75rem;
 }
 
-/* Input field enhancements */
+
 input {
   padding: 10px;
   width: 80%;
@@ -42,7 +42,7 @@ input:focus {
   outline: none;
 }
 
-/* Logo styling */
+
 img {
   width: 128px;
   height: 128px;
