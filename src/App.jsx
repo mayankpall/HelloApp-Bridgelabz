@@ -4,9 +4,19 @@ import './App.css'
 import LogoComponents from './components/LogoComponents';
 
 function App() {
-  const [userName, setUserName] = useState();
+  const [userName, setUserName] = useState("");
+  const [error, setError] = useState("");
   const logoLink = 'https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg ';
   const siteUrl = 'https://www.bridgelabz.com';
+
+  const handleChange = (e)=> {
+      const value = e.target.value;
+      setUserName(value);
+      
+      const isValid = /^[A-Z]/.test(value) && value.length>=3;
+      setError(isValid?"":"Name must start with a capital letter and be at least 3 characters long.")
+    }
+  
 
 
   return (
@@ -14,15 +24,20 @@ function App() {
      <div><LogoComponents logoLink={logoLink} siteUrl={siteUrl} > </LogoComponents></div>
      <input type="text" 
       value={userName}
-      onChange={(e)=> setUserName(e.target.value)}
-      placeholder='Message'
+      onChange={handleChange}
+      placeholder='Name'
      />
+    
     <h1>
-      {userName? `Hello ${userName} from bridgelabz` : "Hello from bridgelabz"}
+      {(userName && !error) ? `Hello ${userName} from bridgelabz` : "Hello from bridgelabz"}
     </h1>
+
+    {error ? <p className="error">{error}</p> : null}
+    
 
     </>
   )
 }
 
 export default App
+
