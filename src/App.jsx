@@ -1,13 +1,14 @@
 
 import './App.css'
+import LogoComponents from './components/LogoComponents';
 
 function App() {
   const name = "Bridglabz";
-  const logoLink = "https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg ";
-
+  const logoLink = 'https://www.bridgelabz.com/assets/images/BridgeLabz%20New%20Logo.svg ';
+  const siteUrl = 'https://www.bridgelabz.com';
   return (
     <>
-    <img src={logoLink} alt="BridgeLabz" />
+     <LogoComponents logoLink={logoLink} siteUrl={siteUrl} > </LogoComponents>
      <div>Hello from {name}!  </div>
     </>
   )
