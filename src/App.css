@@ -1,47 +1,58 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Center container with structured alignment */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ff8a00;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Heading message with better spacing */
+.message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
 }
 
-.error{
+/* Error message styling */
+.error {
+  font-size: 1rem;
+  font-weight: 500;
   color: red;
-  font-size: 25px;
+  margin-top: 0.75rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input field enhancements */
+input {
+  padding: 10px;
+  width: 80%;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: border 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:focus {
+  border-color: #1e40af;
+  outline: none;
 }
 
-.card {
-  padding: 2em;
+/* Logo styling */
+img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: opacity 0.3s ease-in-out, transform 0.2s;
 }
 
-.read-the-docs {
-  color: #888;
+img:hover {
+  opacity: 0.75;
+  transform: scale(1.05);
 }
